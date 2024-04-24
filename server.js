@@ -22,11 +22,10 @@ http.createServer((request, response) => {
         response.write(data);
         response.end();
 
-
-    })
+    });
 
 }).listen(8080);
 
-console.log('My first Node test server is running on Port 8080.');
+console.log('My test server is running on Port 8080.');
 
 
