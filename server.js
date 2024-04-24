@@ -3,8 +3,9 @@ const http = require('http'),
     url = require('url');
 
 http.createServer((request, response) => {
-    let addr = "request.url";
+    let addr = "request.url",
     q = new URL(addr, 'http://localhost:8080'),
+    filePath =  '';
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.end('Hello Node!\n');
 }).listen(8080);
