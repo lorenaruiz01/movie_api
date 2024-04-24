@@ -4,7 +4,7 @@ const http = require('http'),
 
 http.createServer((request, response) => {
     let addr = request.url,
-    q = new URL(addr, 'http://localhost:8080'),
+    q = new URL(addr, 'http://' + request.headers.host),
     filePath =  '';
 
     if (q.pathname.includes('documentation')) {
