@@ -6,6 +6,11 @@ http.createServer((request, response) => {
     let addr = "request.url",
     q = new URL(addr, 'http://localhost:8080'),
     filePath =  '';
+
+    if (q.pathname.includes('documentation')) {
+        filePath = (__dirname + '/documentation.html');
+    }
+
     response.writeHead(200, {'Content-Type': 'text/plain'});
     response.end('Hello Node!\n');
 }).listen(8080);
