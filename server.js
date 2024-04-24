@@ -17,11 +17,12 @@ http.createServer((request, response) => {
         if (err) {
             throw err;
         }
-
         
+        response.writeHead(200, { "Content-Type": "text/html" });
+
+
     })
 
-    response.writeHead(200, {'Content-Type': 'text/plain'});
     response.end('Hello Node!\n');
 }).listen(8080);
 
