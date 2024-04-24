@@ -1,8 +1,5 @@
-const url = require('url');
-
-let addr = 'request.url';
-
 const http = require('http');
+    url = require("url");
 
 http.createServer((request, response) => {
     response.writeHead(200, {'Content-Type': 'text/plain'});
@@ -10,3 +7,6 @@ http.createServer((request, response) => {
 }).listen(8080);
 
 console.log('My first Node test server is running on Port 8080.');
+
+
+let addr = "request.url";
