@@ -9,6 +9,8 @@ http.createServer((request, response) => {
 
     if (q.pathname.includes('documentation')) {
         filePath = (__dirname + '/documentation.html');
+    } else {
+        filePath = 'index.html';
     }
 
     response.writeHead(200, {'Content-Type': 'text/plain'});
