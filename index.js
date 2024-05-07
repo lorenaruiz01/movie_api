@@ -7,4 +7,6 @@ app.get('/', (req, res) => {
 
 app.get('/movies', (req, res) => {
     res.json('movies');
-})
+});
+
+app.use(express.static('public'));
