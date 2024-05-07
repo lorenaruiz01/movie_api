@@ -1,11 +1,12 @@
 const express = require('express');
+const { stream } = require('undici-types');
     morgan = require('morgan');
     fs = require('fs'), 
     path = require('path');
 
 const app = express();
 
-app.use(morgan('common'))
+app.use(morgan('common'));
 
 app.get('/', (req, res) => {
     res.send('Welcome to mySpookyFlix! A place for spooky movies -but not too scary!');
