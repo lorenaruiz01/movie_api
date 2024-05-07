@@ -1,2 +1,6 @@
 const express = require('express');
 const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Welcome to mySpookyFlix! A place for spooky movies -but not scary!')
+});
