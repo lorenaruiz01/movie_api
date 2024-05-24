@@ -64,11 +64,203 @@
     </code>
   </pre>
   
-  <h2>Additional Notes</h2>
-  <ul>
-    <li>Make sure to handle errors gracefully, and provide meaningful error messages in the response.</li>
-    <li>Refer to the API documentation for more detailed information on request parameters and error codes.</li>
-  </ul>
+<!-- table  -->
+	<div class="container">
+		<table class="table table-striped table-bordered table-responsive{-sm|-md|-lg|-xl}" style="width:100%">
+			<thead>
+				<tr>
+					<th class="col-2">Request</th>
+					<th class="col-1">URL</th>
+					<th class="col-1">HTTP Method</th>
+					<th class="col-3">Request body data format</th>
+					<th class="col-5">Response body data format</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Get a list of ALL movies</td>
+					<td>/movies</td>
+					<td>GET</td>
+					<td>none</td>
+					<td>A JSON object holding an array with all movies.</td>
+				</tr>
+				<tr>
+					<td>Get data about a single movie by title</td>
+					<td>/movies/:title</td>
+					<td>GET</td>
+					<td>None</td>
+					<td>A JSON object holding data about a single movie, containing description, genre, director, image URL, and
+						whether it’s featured or not property. Example:
+						<code>
+                            {
+                                title: 'movie 1',
+                                year: '1972',
+                                synopsis: ' this movie is about...',
+                                director: {
+                                    name: 'Sam Director',
+                                    bio: ' bio bio bio...'
+                                },
+                                genre: {
+                                    name: 'horror'
+                                },
+                            },
+                            {
+                                title: 'movie 2',
+                                year: '1972',
+                                synopsis: ' this movie is about...',
+                                director: {
+                                    name: 'Another Director',
+                                    bio: ' bio bio bio...'
+                                },
+                                genre: {
+                                    name: 'horror'
+                                },
+                            },
+                            {
+                                title: 'movie 3',
+                                year: '1972',
+                                synopsis: ' this movie is about...',
+                                director: {
+                                    name: 'Yet Another Director',
+                                    bio: ' bio bio bio...'
+                                },
+                                genre: {
+                                    name: 'comedy'
+                                },
+                            },
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Get data about a genre by genre's name</td>
+					<td>/movies/genre/:genreName</td>
+					<td>GET</td>
+					<td>none</td>
+					<td>A JSON object holding data about a genre containing name and description properties. Example:
+						<code>
+							{
+                                genre: {
+                                    name: 'horror',
+                                    description: 'The genre of horror encompasses many styles...'
+                                }
+                            }
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Get data about a director by director's name</td>
+					<td>/movies/directors/:directorName</td>
+					<td>GET</td>
+					<td>none</td>
+					<td>A JSON object holding data about a director. Example:
+						<code>
+                            {
+                                director: {
+                                    name: 'Sam Director',
+                                    bio: ' bio bio bio...'
+                                }
+                            }
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Add a new user</td>
+					<td>/users</td>
+					<td>POST</td>
+					<td>A JSON object holding user data, structured like this:
+						<code>
+						    {
+                                "name": "Mary Smith",
+                                "username": "marysFlix",
+                                "favoriteMovies": []
+                            }
+					</code>
+					</td>
+					<td>A JSON object holding user data plus an ID and a array for placing favorite movies:
+						<code>
+                            {
+                                "name": "Mary Smith",
+                                "username": "marysFlix",
+                                "favoriteMovies": [],
+                                "id": "ef6280cc-e046-4c1f-93af-b03b21d6d29d"
+                            }
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Update user info</td>
+					<td>/users/:id</td>
+					<td>PUT</td>
+					<td>A JSON object holding the user info that should be changed. It should contain at least one of the following key/value pairs:
+						<code>
+						{
+							"name": string,
+                            "username": string,
+							"password": string,
+							"Email": string,
+                            "favoriteMovies": []
+						}
+                        Example: 
+                        {   
+                            "name": "Sam Name",
+                            "username": "SamUpdatedName"
+                        }
+					</code>
+					</td>
+					<td>A JSON object holding all user info with all key/values pair updated:
+						<code>
+                            {
+                                "id": 1,
+                                "name": "Sam Name",
+                                "username": "SamUpdatedName",
+                                "password": "****",
+                                "email": "someemail@email.com",
+                                "favoriteMovies": []
+                            }
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Add a movie to user favorite list</td>
+					<td>/users/:id/:movieTitle</td>
+					<td>POST</td>
+					<td>None</td>
+					<td>A message confirmation of the movie added to user's list of favorite movies.
+						<code>
+						"'movie 2' has been added to SamUpdatedName's list of favorite movies"
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Remove a movie from user favorite list</td>
+					<td>/users/:id/:movieTitle</td>
+					<td>DELETE</td>
+					<td>None</td>
+					<td>A message confirmation of the movie removed from user's list of favorite movies.
+						<code>
+						"'movie 2' has been deleted from otterName's list of favorite movies"
+					</code>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete user registration</td>
+					<td>/users/:id</td>
+					<td>DELETE</td>
+					<td>None</td>
+					<td>A text message indicating whether a user was successfully removed.
+                        <code>
+                            "user SamUpdatedName's account has been deleted."
+                        </code>
+                    </td>
+				</tr>
+
+
+
+
+			</tbody>
+		</table>
+
+	</div>
   
   <h2>Contact</h2>
   <p>If you have any questions or need further assistance, feel free to contact us at me@emailme.com.</p>
