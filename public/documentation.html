@@ -99,42 +99,42 @@
 						whether it’s featured or not property. Example:
 						<pre>
             <code>
-                            {
-                                title: 'movie 1',
-                                year: '1972',
-                                synopsis: ' this movie is about...',
-                                director: {
-                                    name: 'Sam Director',
-                                    bio: ' bio bio bio...'
-                                },
-                                genre: {
-                                    name: 'horror'
-                                },
-                            },
-                            {
-                                title: 'movie 2',
-                                year: '1972',
-                                synopsis: ' this movie is about...',
-                                director: {
-                                    name: 'Another Director',
-                                    bio: ' bio bio bio...'
-                                },
-                                genre: {
-                                    name: 'horror'
-                                },
-                            },
-                            {
-                                title: 'movie 3',
-                                year: '1972',
-                                synopsis: ' this movie is about...',
-                                director: {
-                                    name: 'Yet Another Director',
-                                    bio: ' bio bio bio...'
-                                },
-                                genre: {
-                                    name: 'comedy'
-                                },
-                            },
+            {
+              title: 'movie 1',
+              year: '1972',
+              synopsis: ' this movie is about...',
+              director: {
+                  name: 'Sam Director',
+                  bio: ' bio bio bio...'
+              },
+              genre: {
+                  name: 'horror'
+              },
+            },
+            {
+              title: 'movie 2',
+              year: '1972',
+              synopsis: ' this movie is about...',
+              director: {
+                  name: 'Another Director',
+                  bio: ' bio bio bio...'
+              },
+              genre: {
+                  name: 'horror'
+              },
+            },
+            {
+              title: 'movie 3',
+              year: '1972',
+              synopsis: ' this movie is about...',
+              director: {
+                  name: 'Yet Another Director',
+                  bio: ' bio bio bio...'
+              },
+              genre: {
+                  name: 'comedy'
+              },
+            },
 					</code>
           </pre>
 					</td>
@@ -147,12 +147,12 @@
 					<td>A JSON object holding data about a genre containing name and description properties. Example:
 						</pre>
             <code>
-							{
-                                genre: {
-                                    name: 'horror',
-                                    description: 'The genre of horror encompasses many styles...'
-                                }
-                            }
+						{
+              genre: {
+              name: 'horror',
+              description: 'The genre of horror encompasses many styles...'
+              }
+            }
             </code>
             </pre>
 					</td>
@@ -165,12 +165,12 @@
 					<td>A JSON object holding data about a director. Example:
 						<pre>
             <code>
-                            {
-                                director: {
-                                    name: 'Sam Director',
-                                    bio: ' bio bio bio...'
-                                }
-                            }
+            {
+              director: {
+              name: 'Sam Director',
+              bio: ' bio bio bio...'
+              }
+            }
 					  </code>
             </pre>
 					</td>
@@ -182,23 +182,23 @@
 					<td>A JSON object holding user data, structured like this:
 						<pre>
             <code>
-						    {
-                                "name": "Mary Smith",
-                                "username": "marysFlix",
-                                "favoriteMovies": []
-                            }
+            {
+              "name": "Mary Smith",
+              "username": "marysFlix",
+              "favoriteMovies": []
+            }
 					  </code>
             </pre>
 					</td>
 					<td>A JSON object holding user data plus an ID and a array for placing favorite movies:
 						<pre>
             <code>
-                            {
-                                "name": "Mary Smith",
-                                "username": "marysFlix",
-                                "favoriteMovies": [],
-                                "id": "ef6280cc-e046-4c1f-93af-b03b21d6d29d"
-                            }
+            {
+              "name": "Mary Smith",
+              "username": "marysFlix",
+              "favoriteMovies": [],
+              "id": "ef6280cc-e046-4c1f-93af-b03b21d6d29d"
+            }
 					  </code>
             </pre>
 					</td>
@@ -211,31 +211,31 @@
 						<pre> 
             <code>
 						{
-							"name": string,
-                            "username": string,
-							"password": string,
-							"Email": string,
-                            "favoriteMovies": []
+              "name": string,
+              "username": string,
+              "password": string,
+              "Email": string,
+              "favoriteMovies": []
 						}
-                        Example: 
-                        {   
-                            "name": "Sam Name",
-                            "username": "SamUpdatedName"
-                        }
+            Example: 
+            {   
+              "name": "Sam Name",
+              "username": "SamUpdatedName"
+            }
             </code>
             </pre>
 					</td>
 					<td>A JSON object holding all user info with all key/values pair updated:
 						<pre>
             <code>
-                            {
-                                "id": 1,
-                                "name": "Sam Name",
-                                "username": "SamUpdatedName",
-                                "password": "****",
-                                "email": "someemail@email.com",
-                                "favoriteMovies": []
-                            }
+            {
+              "id": 1,
+              "name": "Sam Name",
+              "username": "SamUpdatedName",
+              "password": "****",
+              "email": "someemail@email.com",
+              "favoriteMovies": []
+            }
 					  </code>
             </pre>
 					</td>
@@ -257,9 +257,11 @@
 					<td>DELETE</td>
 					<td>None</td>
 					<td>A message confirmation of the movie removed from user's list of favorite movies.
-						<code>
+						<pre>
+            <code>
 						"'movie 2' has been deleted from otterName's list of favorite movies"
 					</code>
+          </pre>
 					</td>
 				</tr>
 				<tr>
@@ -268,12 +270,12 @@
 					<td>DELETE</td>
 					<td>None</td>
 					<td>A text message indicating whether a user was successfully removed.
-                        <pre> 
-                        <code>
-                            "user SamUpdatedName's account has been deleted."
-                        </code>
-                        </pre>
-                    </td>
+            <pre> 
+            <code>
+            "user SamUpdatedName's account has been deleted."
+            </code>
+            </pre>
+          </td>
 				</tr>
 
 
