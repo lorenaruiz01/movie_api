@@ -10,44 +10,46 @@
   <title>Movie API Documentation</title>
 </head>
 <body>
-  <h1>Movie API Documentation</h1>
+  <div class="container" id="title"> 
+    <h1>Movie API Documentation</h1>
   
-  <h2>Introduction</h2>
-  <p>Welcome to the documentation for our SpookyMovies API! This API provides access to a collection of movies along with their details, including title, summary, release date, genre, director information, image URL, and feature status.</p>
+    <h2>Introduction</h2>
+    <p>Welcome to the documentation for our SpookyMovies API! This API provides access to a collection of movies along with their details, including title, summary, release date, genre, director information, image URL, and feature status.</p>
+  </div>
+  <div class="container"> </div>
+    <h2>Getting Started</h2>
+    <p>To get started using the SpookyMovie API, follow these steps:</p>
+    <ol>
+      <li>Ensure you have access to the MongoDB database named "mySpookyFlixDB" where the movie data is stored.</li>
+      <li>Clone or download the "movie_api" directory from our repository.</li>
+      <li>Set up the necessary dependencies and environment variables as specified in the README file.</li>
+      <li>Start the API server using the provided commands.</li>
+    </ol>
   
-  <h2>Getting Started</h2>
-  <p>To get started using the SpookyMovie API, follow these steps:</p>
-  <ol>
-    <li>Ensure you have access to the MongoDB database named "mySpookyFlixDB" where the movie data is stored.</li>
-    <li>Clone or download the "movie_api" directory from our repository.</li>
-    <li>Set up the necessary dependencies and environment variables as specified in the README file.</li>
-    <li>Start the API server using the provided commands.</li>
-  </ol>
-  
-  <h2>Endpoints</h2>
-  <p>The Movie API provides the following endpoints:</p>
-  <ul>
-    <li><strong>GET /movies</strong>: Retrieves a list of all movies in the database.</li>
-    <li><strong>GET /movies/:id</strong>: Retrieves details for a specific movie based on its ID.</li>
+    <h2>Endpoints</h2>
+    <p>The Movie API provides the following endpoints:</p>
+    <ul>
+      <li><strong>GET /movies</strong>: Retrieves a list of all movies in the database.</li>
+      <li><strong>GET /movies/:id</strong>: Retrieves details for a specific movie based on its ID.</li>
     <!-- Add more endpoints if applicable -->
-  </ul>
+    </ul>
   
-  <h2>Example Requests</h2>
-  <p>Here are examples of how to make requests to the API:</p>
-  <pre>
-    <code>
+    <h2>Example Requests</h2>
+    <p>Here are examples of how to make requests to the API:</p>
+    <pre>
+      <code>
       // Get all movies
       GET /movies
       
       // Get details for a specific movie (replace :id with actual movie ID)
       GET /movies/:id
-    </code>
-  </pre>
+      </code>
+    </pre>
   
-  <h2>Response Format</h2>
-  <p>The API returns JSON-formatted responses with the following structure:</p>
-  <pre>
-    <code>
+    <h2>Response Format</h2>
+    <p>The API returns JSON-formatted responses with the following structure:</p>
+    <pre>
+      <code>
       {
         "Title": "Movie Title",
         "Summary": "Movie summary goes here.",
@@ -65,8 +67,8 @@
         "imgUrl": "example.com/movie-image.jpg",
         "Feature": true
       }
-    </code>
-  </pre>
+      </code>
+    </pre>
   
 <!-- table  -->
 	<div class="container">
