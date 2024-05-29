@@ -50,23 +50,23 @@
     <p>The API returns JSON-formatted responses with the following structure:</p>
     <pre>
       <code>
-      {
-        "Title": "Movie Title",
-        "Summary": "Movie summary goes here.",
-        "Release Date": "YYYY-MM-DD",
-        "Genre": {
-          "genreName": "Genre Name",
-          "genreDescription": "Description of the genre."
-        },
-        "Director": {
-          "directorName": "Director Name",
-          "Bio": "Director biography goes here.",
-          "Birth": "YYYY",
-          "Death": "YYYY (if applicable)"
-        },
-        "imgUrl": "example.com/movie-image.jpg",
-        "Feature": true
-      }
+{
+  "Title": "Movie Title",
+  "Summary": "Movie summary goes here.",
+  "Release Date": "YYYY-MM-DD",
+  "Genre": {
+    "genreName": "Genre Name",
+    "genreDescription": "Description of the genre."
+  },
+  "Director": {
+    "directorName": "Director Name",
+    "Bio": "Director biography goes here.",
+    "Birth": "YYYY",
+    "Death": "YYYY (if applicable)"
+  },
+  "imgUrl": "example.com/movie-image.jpg",
+  "Feature": true
+}
       </code>
     </pre>
   </div>
@@ -99,42 +99,42 @@
 						whether it’s featured or not property. Example:
 						<pre>
             <code>
-            {
-              title: 'movie 1',
-              year: '1972',
-              synopsis: ' this movie is about...',
-              director: {
-                  name: 'Sam Director',
-                  bio: ' bio bio bio...'
-              },
-              genre: {
-                  name: 'horror'
-              },
-            },
-            {
-              title: 'movie 2',
-              year: '1972',
-              synopsis: ' this movie is about...',
-              director: {
-                  name: 'Another Director',
-                  bio: ' bio bio bio...'
-              },
-              genre: {
-                  name: 'horror'
-              },
-            },
-            {
-              title: 'movie 3',
-              year: '1972',
-              synopsis: ' this movie is about...',
-              director: {
-                  name: 'Yet Another Director',
-                  bio: ' bio bio bio...'
-              },
-              genre: {
-                  name: 'comedy'
-              },
-            },
+{
+  title: 'movie 1',
+  year: '1972',
+  synopsis: ' this movie is about...',
+  director: {
+    name: 'Sam Director',
+    bio: ' bio bio bio...'
+  },
+  genre: {
+    name: 'horror'
+  },
+},
+{
+  title: 'movie 2',
+  year: '1972',
+  synopsis: ' this movie is about...',
+  director: {
+    name: 'Another Director',
+    bio: ' bio bio bio...'
+  },
+  genre: {
+    name: 'horror'
+  },
+},
+{
+  title: 'movie 3',
+  year: '1972',
+  synopsis: ' this movie is about...',
+  director: {
+    name: 'Yet Another Director',
+    bio: ' bio bio bio...'
+  },
+  genre: {
+    name: 'comedy'
+  },
+},
 					</code>
           </pre>
 					</td>
@@ -147,12 +147,12 @@
 					<td>A JSON object holding data about a genre containing name and description properties. Example:
 						</pre>
             <code>
-						{
-              genre: {
-              name: 'horror',
-              description: 'The genre of horror encompasses many styles...'
-              }
-            }
+{
+  genre: {
+    name: 'horror',
+    description: 'The genre of horror encompasses many styles...'
+  }
+}
             </code>
             </pre>
 					</td>
@@ -165,12 +165,12 @@
 					<td>A JSON object holding data about a director. Example:
 						<pre>
             <code>
-            {
-              director: {
-              name: 'Sam Director',
-              bio: ' bio bio bio...'
-              }
-            }
+{
+  director: {
+    name: 'Sam Director',
+    bio: ' bio bio bio...'
+  }
+}
 					  </code>
             </pre>
 					</td>
@@ -182,23 +182,23 @@
 					<td>A JSON object holding user data, structured like this:
 						<pre>
             <code>
-            {
-              "name": "Mary Smith",
-              "username": "marysFlix",
-              "favoriteMovies": []
-            }
+{
+  "name": "Mary Smith",
+  "username": "marysFlix",
+  "favoriteMovies": []
+}
 					  </code>
             </pre>
 					</td>
 					<td>A JSON object holding user data plus an ID and a array for placing favorite movies:
 						<pre>
             <code>
-            {
-              "name": "Mary Smith",
-              "username": "marysFlix",
-              "favoriteMovies": [],
-              "id": "ef6280cc-e046-4c1f-93af-b03b21d6d29d"
-            }
+{
+  "name": "Mary Smith",
+  "username": "marysFlix",
+  "favoriteMovies": [],
+  "id": "ef6280cc-e046-4c1f-93af-b03b21d6d29d"
+}
 					  </code>
             </pre>
 					</td>
@@ -208,34 +208,34 @@
 					<td>/users/:id</td>
 					<td>PUT</td>
 					<td>A JSON object holding the user info that should be changed. It should contain at least one of the following key/value pairs:
-						<pre> 
+						<pre>
             <code>
-						{
-              "name": string,
-              "username": string,
-              "password": string,
-              "email": string,
-              "favoriteMovies": []
-						}
-            Example: 
-            {   
-              "name": "Sam Name",
-              "username": "SamUpdatedName"
-            }
+  {
+    "name": string,
+    "username": string,
+    "password": string,
+    "email": string,
+    "favoriteMovies": []
+  }
+  Example: 
+  {   
+    "name": "Sam Name",
+    "username": "SamUpdatedName"
+  }
             </code>
             </pre>
 					</td>
 					<td>A JSON object holding all user info with all key/values pair updated:
 						<pre>
             <code>
-            {
-              "id": 1,
-              "name": "Sam Name",
-              "username": "SamUpdatedName",
-              "password": "****",
-              "email": "someemail@email.com",
-              "favoriteMovies": []
-            }
+{
+  "id": 1,
+  "name": "Sam Name",
+  "username": "SamUpdatedName",
+  "password": "****",
+  "email": "someemail@email.com",
+  "favoriteMovies": []
+}
 					  </code>
             </pre>
 					</td>
